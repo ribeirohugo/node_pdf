@@ -1,8 +1,19 @@
 {
   "name": "node_pdf",
   "version": "1.0.0",
-  "description": "",
+  "description": "Merge multiple PDF files into one, usable as a CLI or as a Node.js library.",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "bin": {
+    "node-pdf-merge": "./bin/cli.js"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "bin"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js,.mjs",
@@ -12,7 +23,12 @@
     "type": "git",
     "url": "git+https://github.com/ribeirohugo/node_pdf.git"
   },
-  "keywords": [],
+  "keywords": [
+    "pdf",
+    "merge",
+    "pdf-merge",
+    "cli"
+  ],
   "author": "",
   "license": "ISC",
   "type": "module",
