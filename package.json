@@ -1,13 +1,14 @@
 {
   "name": "node_pdf",
   "version": "1.0.0",
-  "description": "Merge multiple PDF files into one, usable as a CLI or as a Node.js library.",
+  "description": "Merge PDF files or convert ordered JPGs into a PDF, usable as a CLI or as a Node.js library.",
   "main": "index.js",
   "exports": {
     ".": "./index.js"
   },
   "bin": {
-    "node-pdf-merge": "./bin/cli.js"
+    "node-pdf-merge": "./bin/cli.js",
+    "node-images-to-pdf": "./bin/images-to-pdf-cli.js"
   },
   "files": [
     "index.js",
@@ -27,6 +28,8 @@
     "pdf",
     "merge",
     "pdf-merge",
+    "jpg",
+    "image-to-pdf",
     "cli"
   ],
   "author": "",
@@ -37,6 +40,7 @@
   },
   "homepage": "https://github.com/ribeirohugo/node_pdf#readme",
   "dependencies": {
+    "pdf-lib": "^1.17.1",
     "pdf-merger-js": "^5.1.2"
   },
   "devDependencies": {
