@@ -16,7 +16,7 @@ function parseArgs() {
   return { inputFiles, outputFile };
 }
 
-(async() => {
+(async () => {
   const { inputFiles, outputFile } = parseArgs();
   try {
     await imagesToPdf(inputFiles, outputFile);

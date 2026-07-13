@@ -18,7 +18,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js,.mjs",
-    "lint:fix": "eslint . --ext .js,.mjs --fix"
+    "lint:fix": "eslint . --ext .js,.mjs --fix",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -44,6 +47,8 @@
     "pdf-merger-js": "^5.1.2"
   },
   "devDependencies": {
-    "eslint": "^10.0.1"
+    "eslint": "^10.0.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.9.5"
   }
 }

@@ -16,7 +16,7 @@ function parseArgs() {
   return { inputFiles, outputFile };
 }
 
-(async() => {
+(async () => {
   const { inputFiles, outputFile } = parseArgs();
   try {
     await mergePdfs(inputFiles, outputFile);
