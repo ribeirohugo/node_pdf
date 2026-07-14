@@ -21,7 +21,10 @@
     "lint:fix": "eslint . --ext .js,.mjs --fix",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:merge": "pkg bin/cli.js --targets node22-win-x64,node22-linux-x64,node22-macos-x64 --output dist/node-pdf-merge",
+    "build:images-to-pdf": "pkg bin/images-to-pdf-cli.js --targets node22-win-x64,node22-linux-x64,node22-macos-x64 --output dist/node-images-to-pdf",
+    "build": "npm run build:merge && npm run build:images-to-pdf"
   },
   "repository": {
     "type": "git",
@@ -47,6 +50,7 @@
     "pdf-merger-js": "^5.1.2"
   },
   "devDependencies": {
+    "@yao-pkg/pkg": "^6.21.0",
     "eslint": "^10.0.1",
     "husky": "^9.1.7",
     "prettier": "^3.9.5"
